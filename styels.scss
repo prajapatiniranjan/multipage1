@@ -22,10 +22,6 @@ nav {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: background $transition-speed;
 
-  &:hover {
-    background: lighten($primary-color, 5%);
-  }
-
   .logo {
     font-size: 24px;
   }
@@ -300,17 +296,17 @@ footer {
     align-items: flex-start;
 
     .hamburger {
-      display: flex;
+      display: flex; // Show hamburger menu on mobile
     }
 
     ul {
-      display: none;
+      display: none; // Initially hide the menu
       flex-direction: column;
       width: 100%;
       padding: 0;
 
       &.active {
-        display: flex;
+        display: flex; // Show the menu when active
       }
     }
   }

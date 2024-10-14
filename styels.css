@@ -16,9 +16,6 @@ nav {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: background 0.3s;
 }
-nav:hover {
-  background: #404040;
-}
 nav .logo {
   font-size: 24px;
 }
