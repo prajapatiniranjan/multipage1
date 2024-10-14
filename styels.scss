@@ -1,0 +1,335 @@
+$primary-color: #333;
+$secondary-color: #f4f4f4;
+$padding: 15px;
+$margin: 10px;
+$transition-speed: 0.3s;
+
+// Base Styles
+body {
+  font-family: "Times New Roman", serif;
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+}
+
+nav {
+  background: $primary-color;
+  color: #fff;
+  padding: $padding;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background $transition-speed;
+
+  &:hover {
+    background: lighten($primary-color, 5%);
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+    div {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      margin: 4px;
+      transition: all $transition-speed;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      transition: color $transition-speed;
+
+      &:hover {
+        color: lighten(#fff, 20%);
+      }
+    }
+  }
+}
+
+// Hero Section
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 400px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url(/images/hero/DALL·E\ 2024-10-14\ 09.00.41\ -\ A\ clean\ and\ modern\ hero\ section\ image\ for\ a\ protein\ website.\ The\ scene\ features\ a\ container\ of\ protein\ powder\ next\ to\ a\ glass\ of\ a\ protein\ shake\ on\ a\ .webp);
+
+  .hero-text {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+
+    h1 {
+      margin: 0;
+      font-size: 40px;
+      transition: transform $transition-speed;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    p {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+
+    .btn {
+      background: $primary-color;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      transition: background $transition-speed;
+
+      &:hover {
+        background: darken($primary-color, 10%);
+      }
+    }
+  }
+}
+
+// Main Content
+.main-content {
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: $margin;
+  transition: transform $transition-speed;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: $padding;
+  text-align: center;
+  transition: box-shadow $transition-speed, transform $transition-speed;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    transition: transform $transition-speed;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  button {
+    background: $primary-color;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background $transition-speed;
+
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  }
+}
+
+// Categories Section
+#categories {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: $secondary-color;
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .category-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: $padding;
+    text-align: center;
+    transition: transform $transition-speed, box-shadow $transition-speed;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      transition: transform $transition-speed;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: $primary-color;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      transition: background $transition-speed;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}
+
+// Footer
+footer {
+  background: $primary-color;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  transition: background $transition-speed;
+
+  &:hover {
+    background: lighten($primary-color, 5%);
+  }
+
+  .social-media {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: $margin;
+    padding: 0;
+
+    li {
+      margin: 0;
+
+      a {
+        color: #fff;
+        transition: color $transition-speed;
+
+        &:hover {
+          color: lighten(#fff, 20%);
+        }
+
+        i {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: $margin;
+
+    a {
+      color: #fff;
+      transition: color $transition-speed;
+
+      &:hover {
+        color: lighten(#fff, 20%);
+      }
+    }
+  }
+}
+
+// Responsive Styles
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .hamburger {
+      display: flex;
+    }
+
+    ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+
+      &.active {
+        display: flex;
+      }
+    }
+  }
+
+  .hero {
+    height: 300px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 250px;
+  }
+
+  .hero-text h1 {
+    font-size: 24px;
+  }
+}

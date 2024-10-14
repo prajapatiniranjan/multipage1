@@ -1,0 +1,285 @@
+@charset "UTF-8";
+body {
+  font-family: "Times New Roman", serif;
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+}
+
+nav {
+  background: #333;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
+}
+nav:hover {
+  background: #404040;
+}
+nav .logo {
+  font-size: 24px;
+}
+nav .hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+nav .hamburger div {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 4px;
+  transition: all 0.3s;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+nav ul a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav ul a:hover {
+  color: white;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url(/images/hero/DALL·E\ 2024-10-14\ 09.00.41\ -\ A\ clean\ and\ modern\ hero\ section\ image\ for\ a\ protein\ website.\ The\ scene\ features\ a\ container\ of\ protein\ powder\ next\ to\ a\ glass\ of\ a\ protein\ shake\ on\ a\ .webp);
+}
+.hero .hero-text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero .hero-text h1 {
+  margin: 0;
+  font-size: 40px;
+  transition: transform 0.3s;
+}
+.hero .hero-text h1:hover {
+  transform: scale(1.05);
+}
+.hero .hero-text p {
+  margin: 10px 0;
+  font-size: 20px;
+}
+.hero .hero-text .btn {
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.hero .hero-text .btn:hover {
+  background: #1a1a1a;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+h2:hover {
+  transform: scale(1.05);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+.product-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+.product-card img:hover {
+  transform: scale(1.1);
+}
+.product-card button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.product-card button:hover {
+  background: #1a1a1a;
+}
+
+#categories {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+#categories .category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  #categories .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  #categories .category-grid {
+    grid-template-columns: 1fr;
+  }
+}
+#categories .category-card {
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+#categories .category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+#categories .category-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+#categories .category-card img:hover {
+  transform: scale(1.05);
+}
+#categories .category-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+#categories .category-card button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#categories .category-card button:hover {
+  background-color: #1a1a1a;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  transition: background 0.3s;
+}
+footer:hover {
+  background: #404040;
+}
+footer .social-media {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+}
+footer .social-media li {
+  margin: 0;
+}
+footer .social-media li a {
+  color: #fff;
+  transition: color 0.3s;
+}
+footer .social-media li a:hover {
+  color: white;
+}
+footer .social-media li a i {
+  font-size: 20px;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+footer ul a {
+  color: #fff;
+  transition: color 0.3s;
+}
+footer ul a:hover {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav .hamburger {
+    display: flex;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+  nav ul.active {
+    display: flex;
+  }
+  .hero {
+    height: 300px;
+  }
+  .hero-text h1 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 480px) {
+  .hero {
+    height: 250px;
+  }
+  .hero-text h1 {
+    font-size: 24px;
+  }
+}/*# sourceMappingURL=styels.css.map */
