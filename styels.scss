@@ -329,3 +329,43 @@ footer {
     font-size: 24px;
   }
 }
+
+.footer {
+  background-image: url('your-background-image.jpg'); // Add your background image path
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+  color: white;
+  text-align: center;
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .footer-item {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 10px;
+
+      .icon {
+        background-color: #e74c3c;
+        padding: 15px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+
+        i {
+          color: white;
+          font-size: 20px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+      }
+    }
+  }
+}

@@ -279,4 +279,38 @@ footer ul a:hover {
   .hero-text h1 {
     font-size: 24px;
   }
+}
+.footer {
+  background-image: url("your-background-image.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+  color: white;
+  text-align: center;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.footer .container .footer-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+}
+.footer .container .footer-item .icon {
+  background-color: #e74c3c;
+  padding: 15px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.footer .container .footer-item .icon i {
+  color: white;
+  font-size: 20px;
+}
+.footer .container .footer-item p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
 }/*# sourceMappingURL=styels.css.map */
